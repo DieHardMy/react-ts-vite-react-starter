@@ -1,0 +1,35 @@
+// tsconfig.app.json
+{
+  "compilerOptions": {
+    "composite": true, // ОСТАВЛЯЕМ
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true, // ОСТАВЛЯЕМ
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    // "noEmit": true, // Заменяем на emitDeclarationOnly
+    "emitDeclarationOnly": true, // <--- ИЗМЕНЕНО/ДОБАВЛЕНО
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Настройки путей */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
